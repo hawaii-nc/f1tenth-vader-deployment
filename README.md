@@ -1,5 +1,9 @@
 # F1Tenth VADER — RMA Deployment
 
+> **Superseded.** This is a backup of the on-car code as it ran in July 2026. The maintained deployment node, trained models and install checklist are in [f1tenth-rma](https://github.com/hawaii-nc/f1tenth-rma) (`src/rma_deploy_pkg/`, `runs/`, `deploy/`).
+>
+> Do not deploy the checkpoints in this repo for new experiments: this node runs at 50 Hz while the policies were trained at 100 Hz, it has no active grip probe, and the July pipeline had training bugs (see `docs/BUGS_AND_LESSONS.md` in f1tenth-rma). Keep this repo for reproducing the July pilot only.
+
 ROS2 deployment package that runs a trained **Rapid Motor Adaptation** policy on the physical F1Tenth car ("VADER", Jetson, JetPack 5.4.1 / Python 3.8).
 
 The policy drives autonomously using **only LiDAR (108 beams) + odometry** — no map, GPS, or raceline required — and works on any track shape, including our physical cardboard track.
